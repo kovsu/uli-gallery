@@ -1,6 +1,8 @@
-## 우리(uli) Gallery
+<div align="center">
+  <img src="./logo/uli-dark.svg" alt="uli gallery" />
+</div>
 
-<img src="./logo/uli-dark.svg" alt="uli gallery" />
+## 우리(uli) Gallery
 
 ### What is uli Gallery?
 
