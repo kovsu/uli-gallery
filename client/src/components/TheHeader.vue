@@ -6,27 +6,22 @@ const toggleDark = useToggle(isDark);
 </script>
 
 <template>
-  <header>
-    <div class="switch" @click="toggleDark()">
-      <Icon v-if="isDark" icon="ri:sun-fill" />
-      <Icon v-else icon="ri:moon-fill" />
+  <header class="px-16 py-6 flex items-center">
+    <div>
+      <img v-if="isDark" class="h-24" src="../logo/uli-dark.svg" alt="uli gallery">
+      <img v-else class="h-24" src="../logo/uli.svg" alt="uli gallery">
     </div>
-    <a href="https://github.com/kovsu" target="_blank">
-      <Icon icon="mdi:github" />
-    </a>
+    <div class="ml-auto flex gap-6">
+      <div @click="toggleDark()">
+        <Icon v-if="isDark" icon="ri:sun-fill" />
+        <Icon v-else icon="ri:moon-fill" />
+      </div>
+      <a href="https://github.com/kovsu" target="_blank">
+        <Icon icon="mdi:github" />
+      </a>
+      <button>
+        <Icon icon="mdi:user-outline" />
+      </button>
+    </div>
   </header>
 </template>
-
-<style scoped>
-header {
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1.2rem;
-}
-
-.switch {
-  cursor: pointer;
-}
-</style>
