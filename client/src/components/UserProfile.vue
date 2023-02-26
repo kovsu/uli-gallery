@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import UserPhotos from "./UserPhotos.vue";
 import UserFriends from "./UserFriends.vue";
+import UserCollection from "./UserCollection.vue";
 </script>
 
 <template>
@@ -40,6 +41,7 @@ import UserFriends from "./UserFriends.vue";
       <h1 class="font-bold text-5xl">
         Collections
       </h1>
+      <UserCollection />
     </div>
   </div>
 </template>
