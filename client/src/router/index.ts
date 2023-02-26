@@ -15,6 +15,10 @@ export const router = createRouter({
           path: "login",
           component: () => import("../components/UserLogin.vue"),
         },
+        {
+          path: "profile",
+          component: () => import("../components/UserProfile.vue"),
+        },
       ],
     },
   ],
