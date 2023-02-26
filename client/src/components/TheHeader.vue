@@ -1,13 +1,23 @@
 <script setup lang='ts'>
 import { useToggle } from "@vueuse/core";
+import { useRouter } from "vue-router";
 import { isDark } from "../composable/dark";
 
 const toggleDark = useToggle(isDark);
+const router = useRouter();
+
+function toUser() {
+  router.push("/user");
+}
+
+function toHome() {
+  router.push("/");
+}
 </script>
 
 <template>
   <header class="px-16 py-6 flex items-center">
-    <div>
+    <div class="cursor-pointer" @click="toHome">
       <img v-if="isDark" class="h-24" src="../logo/uli-dark.svg" alt="uli gallery">
       <img v-else class="h-24" src="../logo/uli.svg" alt="uli gallery">
     </div>
@@ -19,7 +29,7 @@ const toggleDark = useToggle(isDark);
       <a href="https://github.com/kovsu" target="_blank">
         <Icon icon="mdi:github" />
       </a>
-      <button>
+      <button @click="toUser">
         <Icon icon="mdi:user-outline" />
       </button>
     </div>

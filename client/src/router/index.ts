@@ -7,5 +7,15 @@ export const router = createRouter({
       path: "/",
       component: () => import("../views/Gallery.vue"),
     },
+    {
+      path: "/user",
+      component: () => import("../views/User.vue"),
+      children: [
+        {
+          path: "login",
+          component: () => import("../components/UserLogin.vue"),
+        },
+      ],
+    },
   ],
 });
