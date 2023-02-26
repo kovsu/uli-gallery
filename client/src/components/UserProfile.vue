@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import UserPhotos from "./UserPhotos.vue";
+import UserFriends from "./UserFriends.vue";
 </script>
 
 <template>
@@ -25,9 +26,20 @@ import UserPhotos from "./UserPhotos.vue";
     </div>
     <div class="mt-12">
       <h1 class="font-bold text-5xl">
+        Friends
+      </h1>
+      <UserFriends />
+    </div>
+    <div class="mt-12">
+      <h1 class="font-bold text-5xl">
         Photos
       </h1>
       <UserPhotos />
+    </div>
+    <div class="mt-12">
+      <h1 class="font-bold text-5xl">
+        Collections
+      </h1>
     </div>
   </div>
 </template>

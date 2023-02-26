@@ -10,10 +10,14 @@ import { images } from "../composable/mock";
         <p>Upload Image</p>
       </div>
     </div>
-    <figure v-for="(image, index) in images" :key="index" class="w-1/3 h-96 overflow-hidden cursor-pointer">
+    <figure v-for="(image, index) in images" :key="index" class="w-1/3 h-96 overflow-hidden cursor-pointer relative">
       <img class="w-full h-full object-cover hover:scale-125 duration-300" :src="image.url" alt="">
-      <figcaption>
-        <p>title</p>
+      <figcaption class="absolute top-4 right-4 flex gap-2 text-white opacity-0 invisible duration-200">
+        <Icon v-if="true" icon="material-symbols:lock-open-outline-rounded" />
+        <Icon v-else icon="material-symbols:lock-outline" />
+        <p class="text-2xl">
+          title
+        </p>
       </figcaption>
     </figure>
   </div>
@@ -39,5 +43,14 @@ import { images } from "../composable/mock";
 
 html.dark .load {
   border-color: #fff;
+}
+
+figure:hover > img {
+  filter: brightness(60%);
+}
+
+figure:hover > figcaption {
+  opacity: 1;
+  visibility: visible;
 }
 </style>
